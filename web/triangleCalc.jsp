@@ -16,7 +16,7 @@
             Object obj = request.getAttribute("calcResult");
             if (obj != null) {
                 Double results = (Double) obj;
-                out.print("<p>The area of the rectangle is : " + results.toString() + "</p>");
+                out.print("<p>The area of the triangle is : " + results.toString() + "</p>");
             } else {
                 out.print("Something Went Wrong!");
             }

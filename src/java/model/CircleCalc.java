@@ -18,7 +18,9 @@ public class CircleCalc {
         try {
             if (radius != null) {
                 rad = Double.parseDouble(radius);
-                return (Math.PI * (Math.pow(rad, POWER_2)));
+                double dblRad = Math.pow(rad, POWER_2);
+                double calc = (Math.PI * dblRad);
+                return calc;
             } else {
                 return 0;
             }
