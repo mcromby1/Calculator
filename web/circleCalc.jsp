@@ -24,7 +24,7 @@
         %>
         <form id="calc" name="calc" method="POST" action="calcmain">
             <table>
-                <tr><td>Radius: <input type="text" id="radius" name="radius" value=""/></td></tr>
+                <tr><td>Radius: <input type="text" id="radius" name="width" value=""/></td></tr>
                 <tr><td><input type="submit" id="submit" name="submit" value="Circle"/></td></tr>
             </table>
         </form> 
