@@ -2,4 +2,14 @@
     Created on : Sep 14, 2015, 9:08:33 AM
     Author     : user test
 */
+body {text-align: center;
+      margin: 0;
+      padding:0;
+}
+form {width: 300px;
+      margin: auto;}
+
+#calcArea {padding: 2.5%;}
+
+#links {padding: 2.5%;}
 
