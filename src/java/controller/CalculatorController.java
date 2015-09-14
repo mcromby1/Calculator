@@ -18,9 +18,6 @@ import model.TriangleCalc;
 @WebServlet(name = "CalculatorController", urlPatterns = {"/calcmain"})
 public class CalculatorController extends HttpServlet {
 
-    private String RECTANGLE_PAGE = "/rectangleCalc.jsp";
-    private String CIRCLE_PAGE = "/circleCalc.jsp";
-    private String TRIANGLE_PAGE = "/triangleCalc.jsp";
     private static String COMBINED_PAGE = "/calcCombined.jsp";
 
     /**
@@ -38,37 +35,33 @@ public class CalculatorController extends HttpServlet {
         String calcType = request.getParameter("submit");
         RequestDispatcher view = null;
 
-        if (calcType.equals("Rectangle")) {
-
-            String meas1 = request.getParameter("length");
-            String meas2 = request.getParameter("width");
-            RectangleCalc ansServ = new RectangleCalc();
-
-            Double msg = ansServ.getArea(meas1, meas2);
-
-            request.setAttribute("calcResult", msg);
-            view = request.getRequestDispatcher(COMBINED_PAGE);
-        } else if (calcType.equals("Circle")) {
-
-            String meas1 = request.getParameter("radius");
-
-            CircleCalc ansServ = new CircleCalc();
-
-            Double msg = ansServ.getArea(meas1);
-
-            request.setAttribute("calcResult", msg);
-            view = request.getRequestDispatcher(COMBINED_PAGE);
-
-        } else if (calcType.equals("Triangle")) {
-
-            String meas1 = request.getParameter("length");
-            String meas2 = request.getParameter("width");
-            TriangleCalc ansServ = new TriangleCalc();
-
-            Double msg = ansServ.getArea(meas1, meas2);
-
-            request.setAttribute("calcResult", msg);
-            view = request.getRequestDispatcher(COMBINED_PAGE);
+        switch (calcType) {
+            case "Rectangle": {
+                String meas1 = request.getParameter("length");
+                String meas2 = request.getParameter("width");
+                RectangleCalc ansServ = new RectangleCalc();
+                Double msg = ansServ.getArea(meas1, meas2);
+                request.setAttribute("calcResult", msg);
+                view = request.getRequestDispatcher(COMBINED_PAGE);
+                break;
+            }
+            case "Circle": {
+                String meas1 = request.getParameter("radius");
+                CircleCalc ansServ = new CircleCalc();
+                Double msg = ansServ.getArea(meas1);
+                request.setAttribute("calcResult", msg);
+                view = request.getRequestDispatcher(COMBINED_PAGE);
+                break;
+            }
+            case "Triangle": {
+                String meas1 = request.getParameter("length");
+                String meas2 = request.getParameter("width");
+                TriangleCalc ansServ = new TriangleCalc();
+                Double msg = ansServ.getArea(meas1, meas2);
+                request.setAttribute("calcResult", msg);
+                view = request.getRequestDispatcher(COMBINED_PAGE);
+                break;
+            }
         }
 
         view.forward(request, response);
