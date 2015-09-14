@@ -9,11 +9,15 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> 
+        <link rel="stylesheet" href="calcStyle.css">
     </head>
     <body>
         <p>Please select a calculator:</p>
-        <p><a href="rectangleCalc.jsp">Rectangle</a>
-        <p><a href="circleCalc.jsp">Circle</a>       
-        <p><a href="triangleCalc.jsp">Triangle</a>       
+        <div id="links">
+            <a class="btn btn-default" href="rectangleCalc.jsp" role="button">Rectangle</a>
+            <a class="btn btn-default" href="circleCalc.jsp" role="button">Circle</a>       
+            <a class="btn btn-default" href="triangleCalc.jsp" role="button">Triangle</a>
+        </div> 
     </body>
 </html>

@@ -9,24 +9,24 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="calcStyle.css">
         <title>Rectangle Calculator</title>
     </head>
     <body>
-        <%
-            Object obj = request.getAttribute("calcResult");
-            if (obj != null) {
-                Double results = (Double) obj;
-                out.print("<p>The area of the circle is : " + results.toString() + "</p>");
-            } else {
-
-            }
-
-        %>
-        <form id="calc" name="calc" method="POST" action="calcmain">
-            <table>
-                <tr><td>Radius: <input type="text" id="radius" name="width" value=""/></td></tr>
-                <tr><td><input type="submit" id="submit" name="submit" value="Circle"/></td></tr>
-            </table>
-        </form> 
+        <div id="calcArea"
+             <p>Area: ${calcResult}</p>
+            <form id="calc" name="calc" method="POST" action="calcmain">
+                <table>
+                    <tr><td>Radius: <input type="text" id="radius" name="width" value=""/></td></tr>
+                    <tr><td><input type="submit" id="submit" name="submit" value="Circle"/></td></tr>
+                </table>
+            </form> 
+        </div>
+        <div id="links">
+            <a class="btn btn-default" href="rectangleCalc.jsp" role="button">Rectangle</a>
+            <a class="btn btn-default" href="circleCalc.jsp" role="button">Circle</a>       
+            <a class="btn btn-default" href="triangleCalc.jsp" role="button">Triangle</a>
+        </div>
     </body>
 </html>
