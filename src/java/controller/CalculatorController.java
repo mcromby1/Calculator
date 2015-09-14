@@ -42,6 +42,7 @@ public class CalculatorController extends HttpServlet {
                 RectangleCalc ansServ = new RectangleCalc();
                 Double msg = ansServ.getArea(meas1, meas2);
                 request.setAttribute("calcResult", msg);
+                request.setAttribute("calcType", calcType);
                 view = request.getRequestDispatcher(COMBINED_PAGE);
                 break;
             }
@@ -50,6 +51,7 @@ public class CalculatorController extends HttpServlet {
                 CircleCalc ansServ = new CircleCalc();
                 Double msg = ansServ.getArea(meas1);
                 request.setAttribute("calcResult", msg);
+                request.setAttribute("calcType", calcType);
                 view = request.getRequestDispatcher(COMBINED_PAGE);
                 break;
             }
@@ -59,6 +61,7 @@ public class CalculatorController extends HttpServlet {
                 TriangleCalc ansServ = new TriangleCalc();
                 Double msg = ansServ.getArea(meas1, meas2);
                 request.setAttribute("calcResult", msg);
+                request.setAttribute("calcType", calcType);
                 view = request.getRequestDispatcher(COMBINED_PAGE);
                 break;
             }

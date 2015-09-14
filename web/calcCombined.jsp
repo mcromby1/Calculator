@@ -17,28 +17,38 @@
     <body>
         <c:if test="${calcResult} != null">
             <div id="calcArea">
-                <p>Area of ${calcType}: ${calcResult}</p>
+                <p>Area of : ${calcResult}</p>
             </div>
         </c:if>
-        <form id="calcCircle" name="calcCircle" method="POST" action="calcmain">
-            <table>
-                <tr><td>Radius: <input type="text" id="radius" name="radius" value=""/></td></tr>
-                <tr><td><input type="submit" id="submit" name="submit" value="Circle"/></td></tr>
-            </table>
+        <form class="form-inline" id="calcCircle" name="calcCircle" method="POST" action="calcmain" value="Circle">
+            <div class="form-group">
+                <label for="radius">Radius</label>
+                <input type="text" id="radius" name="radius" value=""/>
+            </div>
+            <button type="submit" id="submit" name="submit" value="Circle">Submit Radius</button>
         </form>
-        <form id="calcRectangle" name="calcRectangle" method="POST" action="calcmain">
-            <table>
-                <tr><td>Width: <input type="text" id="width" name="width" value=""/></td></tr>
-                <tr><td>Length: <input type="text" id="length" name="length" value=""/></td></tr>
-                <tr><td><input type="submit" id="submit" name="submit" value="Rectangle"/></td></tr>
-            </table>
+        <form class="form-inline" id="calcRectangle" name="calcRectangle" method="POST" action="calcmain" value="Rectangle">
+            <div class="form-group">
+                <label for="width">Width:</label>
+                <input type="text" id="width" name="width" value=""/>
+            </div>
+            <div class="form-group">
+                <label for="length">Length: </label>
+                <input type="text" id="length" name="length" value=""/>
+            </div>
+            <button type="submit" id="submit" name="submit" value="Rectangle">Submit Rectangle</button>
         </form>
-        <form id="calcTriangle" name="calcTriangle" method="POST" action="calcmain">
-            <table>
-                <tr><td>Width: <input type="text" id="width" name="width" value=""/></td></tr>
-                <tr><td>Length: <input type="text" id="length" name="length" value=""/></td></tr>
-                <tr><td><input type="submit" id="submit" name="submit" value="Triangle"/></td></tr>
-            </table>
-        </form> 
-    </body>
+        <form class="form-inline" id="calcTriangle" name="calcTriangle" method="POST" action="calcmain" value="Triangle">
+            <div class="form-group">
+                <label for="width">Width:</label>
+                <input type="text" id="width" name="width" value=""/>
+            </div>
+            <div class="form-group">
+                <label for="length">Length: </label>
+                <input type="text" id="length" name="length" value=""/>
+            </div>
+            <button type="submit" id="submit" name="submit" value="Triangle">Submit</button>
+        </div>
+    </form> 
+</body>
 </html>
