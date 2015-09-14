@@ -33,7 +33,7 @@
                 <tr><td><input type="submit" id="submit" name="submit" value="Rectangle"/></td></tr>
             </table>
         </form>
-        <form id="calc" name="calc" method="POST" action="calcmain">
+        <form id="calcTriangle" name="calcTriangle" method="POST" action="calcmain">
             <table>
                 <tr><td>Width: <input type="text" id="width" name="width" value=""/></td></tr>
                 <tr><td>Length: <input type="text" id="length" name="length" value=""/></td></tr>
