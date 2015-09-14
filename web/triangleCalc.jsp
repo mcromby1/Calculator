@@ -12,16 +12,7 @@
         <title>Rectangle Calculator</title>
     </head>
     <body>
-        <%
-            Object obj = request.getAttribute("calcResult");
-            if (obj != null) {
-                Double results = (Double) obj;
-                out.print("<p>The area of the triangle is : " + results.toString() + "</p>");
-            } else {
-                out.print("Something Went Wrong!");
-            }
 
-        %>
         <form id="calc" name="calc" method="POST" action="calcmain">
             <table>
                 <tr><td>Width: <input type="text" id="width" name="width" value=""/></td></tr>

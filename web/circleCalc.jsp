@@ -12,16 +12,7 @@
         <title>Rectangle Calculator</title>
     </head>
     <body>
-        <%
-            Object obj = request.getAttribute("calcResult");
-            if (obj != null) {
-                Double results = (Double) obj;
-                out.print("<p>The area of the circle is : " + results.toString() + "</p>");
-            } else {
 
-            }
-
-        %>
         <form id="calc" name="calc" method="POST" action="calcmain">
             <table>
                 <tr><td>Radius: <input type="text" id="radius" name="width" value=""/></td></tr>

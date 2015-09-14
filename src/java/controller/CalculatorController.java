@@ -9,7 +9,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.RectangleCalc;
 import model.CircleCalc;
-import model.TriangleCalc;
 
 /**
  *
@@ -18,9 +17,7 @@ import model.TriangleCalc;
 @WebServlet(name = "CalculatorController", urlPatterns = {"/calcmain"})
 public class CalculatorController extends HttpServlet {
 
-    private String RECTANGLE_PAGE = "/rectangleCalc.jsp";
-    private String CIRCLE_PAGE = "/circleCalc.jsp";
-    private String TRIANGLE_PAGE = "/triangleCalc.jsp";
+    private String CALC_RESULT_URL = "/results.jsp";
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -46,7 +43,7 @@ public class CalculatorController extends HttpServlet {
             Double msg = ansServ.getArea(meas1, meas2);
 
             request.setAttribute("calcResult", msg);
-            view = request.getRequestDispatcher(RECTANGLE_PAGE);
+            view = request.getRequestDispatcher(CALC_RESULT_URL);
         } else if (calcType.equals("Circle")) {
 
             String meas1 = request.getParameter("radius");
@@ -56,18 +53,10 @@ public class CalculatorController extends HttpServlet {
             Double msg = ansServ.getArea(meas1);
 
             request.setAttribute("calcResult", msg);
-            view = request.getRequestDispatcher(CIRCLE_PAGE);
+            view = request.getRequestDispatcher(CALC_RESULT_URL);
 
         } else if (calcType.equals("Triangle")) {
 
-            String meas1 = request.getParameter("length");
-            String meas2 = request.getParameter("width");
-            TriangleCalc ansServ = new TriangleCalc();
-
-            Double msg = ansServ.getArea(meas1, meas2);
-
-            request.setAttribute("calcResult", msg);
-            view = request.getRequestDispatcher(TRIANGLE_PAGE);
         }
 
         view.forward(request, response);
