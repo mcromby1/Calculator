@@ -17,9 +17,7 @@
     <body>
         <c:if test="${calcResult} != null">
             <div id="calcArea">
-
                 <p>Area of ${calcType}: ${calcResult}</p>
-
             </div>
         </c:if>
         <form id="calcCircle" name="calcCircle" method="POST" action="calcmain">
