@@ -16,7 +16,7 @@
     </head>
     <body>
         <div id="calcArea">
-            <c:if test="${calcResult} != null">
+            <c:if test="${!empty calcResult}">
                 <p>Area: ${calcResult}</p>
             </c:if>
             <form id="calc" name="calc" method="POST" action="calcmain">
