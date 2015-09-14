@@ -3,10 +3,11 @@
     Author     : user test
 */
 body {text-align: center;
-
+      margin: 0;
+      padding:0;
 }
-
-form{margin: 0 auto;}
+form {width: 300px;
+      margin: auto;}
 
 #calcArea {padding: 2.5%;}
 

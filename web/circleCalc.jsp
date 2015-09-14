@@ -4,6 +4,7 @@
     Author     : user test
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,12 +15,14 @@
         <title>Rectangle Calculator</title>
     </head>
     <body>
-        <div id="calcArea"
-             <p>Area: ${calcResult}</p>
+        <div id="calcArea">
+            <c:if test="${calcResult} != null">
+                <p>Area: ${calcResult}</p>
+            </c:if>
             <form id="calc" name="calc" method="POST" action="calcmain">
                 <table>
                     <tr><td>Radius: <input type="text" id="radius" name="radius" value=""/></td></tr>
-                    <tr><td><input type="submit" id="circleSubmit" name="circleSubmit" value="Circle"/></td></tr>
+                    <tr><td><input type="submit" id="submit" name="submit" value="Circle"/></td></tr>
                 </table>
             </form> 
         </div>

@@ -4,6 +4,7 @@
     Author     : user test
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,18 +15,20 @@
         <title>Rectangle Calculator</title>
     </head>
     <body>
+    <c:if test="${calcResult} != null">
         <p>Area: ${calcResult}</p>
-        <form id="calc" name="calc" method="POST" action="calcmain">
-            <table>
-                <tr><td>Width: <input type="text" id="width" name="width" value=""/></td></tr>
-                <tr><td>Length: <input type="text" id="length" name="length" value=""/></td></tr>
-                <tr><td><input type="submit" id="submit" name="submit" value="Rectangle"/></td></tr>
-            </table>
-        </form> 
-        <div id="links">
-            <a class="btn btn-default" href="rectangleCalc.jsp" role="button">Rectangle</a>
-            <a class="btn btn-default" href="circleCalc.jsp" role="button">Circle</a>       
-            <a class="btn btn-default" href="triangleCalc.jsp" role="button">Triangle</a>
-        </div>  
-    </body>
+    </c:if>
+    <form id="calc" name="calc" method="POST" action="calcmain">
+        <table>
+            <tr><td>Width: <input type="text" id="width" name="width" value=""/></td></tr>
+            <tr><td>Length: <input type="text" id="length" name="length" value=""/></td></tr>
+            <tr><td><input type="submit" id="submit" name="submit" value="Rectangle"/></td></tr>
+        </table>
+    </form> 
+    <div id="links">
+        <a class="btn btn-default" href="rectangleCalc.jsp" role="button">Rectangle</a>
+        <a class="btn btn-default" href="circleCalc.jsp" role="button">Circle</a>       
+        <a class="btn btn-default" href="triangleCalc.jsp" role="button">Triangle</a>
+    </div>  
+</body>
 </html>
