@@ -15,12 +15,13 @@
         <title>Area Calculators</title>
     </head>
     <body>
-        <div id="calcArea">
-            <c:if test="${calcResult} != null">
-                <p>Area of ${calcType}: ${calcResult}</p>
-            </c:if>
-        </div>
+        <c:if test="${calcResult} != null">
+            <div id="calcArea">
 
+                <p>Area of ${calcType}: ${calcResult}</p>
+
+            </div>
+        </c:if>
         <form id="calcCircle" name="calcCircle" method="POST" action="calcmain">
             <table>
                 <tr><td>Radius: <input type="text" id="radius" name="radius" value=""/></td></tr>
