@@ -15,10 +15,8 @@
         <title>Area Calculators</title>
     </head>
     <body>
-        <c:if test="(${calcResult != null}) && (${calcType != null})">
-            <div id="calcArea">
-                <p>Area of ${calcType}: ${calcResult}</p>
-            </div>
+        <c:if test="(${calcResult}">
+            <p>Area of ${calcType}: ${calcResult}</p>
         </c:if>
         <form class="form-inline" id="calcCircle" name="calcCircle" method="POST" action="calcmain" value="Circle">
             <div class="form-group">
